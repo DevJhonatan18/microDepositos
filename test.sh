@@ -1,4 +1,4 @@
 #!/bin/bash
 
-curl -X POST "$1:$2/v1/depositEvent" -H 'Content-Type:application/json' --data '{"id":12345 , "amount": 123 , "type":"INFO" , "creationDate": "123" , "account": 123}'
+curl -X POST "$1:$2/v1/depositEvent" -H 'Content-Type:application/json' --data '{"id":1 , "amount": 123 , "type":"2" , "creationDate": "123" , "accountId": 123}'
 

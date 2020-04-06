@@ -3,6 +3,7 @@
 /home/jhonatan/Desktop/demo_deposit/src/main/java/com/example/demo_deposit/dao/TransactionDAO.java
 /home/jhonatan/Desktop/demo_deposit/src/main/java/com/example/demo_deposit/config/AutoCreateConfig.java
 /home/jhonatan/Desktop/demo_deposit/src/main/java/com/example/demo_deposit/consumer/DepositEventConsumer.java
+/home/jhonatan/Desktop/demo_deposit/src/main/java/com/example/demo_deposit/config/LibraryEventsConsumerConfig.java
 /home/jhonatan/Desktop/demo_deposit/src/main/java/com/example/demo_deposit/domain/Transaction.java
 /home/jhonatan/Desktop/demo_deposit/src/main/java/com/example/demo_deposit/DemoDepositApplication.java
 /home/jhonatan/Desktop/demo_deposit/src/main/java/com/example/demo_deposit/controller/DepositEventsController.java
