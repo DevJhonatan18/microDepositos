@@ -1,12 +1,53 @@
-version: '2'
+version: '3'
 services:
 
   app:
     build: .
     ports:
     - "8006"
+    networks:
+      - kafka-local
+    depends_on:
+    - mypostgres   
+    - kafka-server
     environment:
-    - SPRING_DATASOURCE_URL=jdbc:postgresql://192.168.0.16:5432/mydb
-    - SPRING_KAFKA_PRODUCER_BOOTSTRAP-SERVER=192.168.0.16:9092
+    - SPRING_DATASOURCE_URL=jdbc:postgresql://mypostgres:5432/kafkadb
+    links:
+    - mypostgres
+    - kafka-server
+      
+  
+ 
+  mypostgres:
+    image: postgres:latest 
+    networks:
+      - kafka-local
+    volumes:
+       - postgres-data:/var/lib/postgresql/data
+    expose:
+    - 5432
+    ports:
+     - "5432:5432"
+    environment:
+     - POSTGRES_PASSWORD=password
+     - POSTGRES_USER=postgres
+     - POSTGRES_DB=kafkadb
+
+  kafka-server:
+   build: kafka
+   networks:
+     - kafka-local
+   hostname: kafka-server
+   environment:
+     - ADVERTISED_HOST=kafka-server
+     - NUM_PARTITIONS=10
+   ports:
+     - "2181:2181"
+     - "9092:9092"  
+
+volumes:
+  postgres-data:
 
 
+networks:
+  kafka-local:
