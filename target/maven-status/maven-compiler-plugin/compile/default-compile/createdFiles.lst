@@ -1,14 +1,11 @@
 com/example/demo_deposit/producer/DepositEventProducer$2.class
 com/example/demo_deposit/producer/DepositEventProducer.class
-com/example/demo_deposit/consumer/DepositEventConsumer$1.class
 com/example/demo_deposit/producer/DepositEventProducer$3.class
 com/example/demo_deposit/domain/Transaction.class
 com/example/demo_deposit/service/ITransactionService.class
-com/example/demo_deposit/config/LibraryEventsConsumerConfig.class
+com/example/demo_deposit/service/TransactionServiceImpl.class
 com/example/demo_deposit/producer/DepositEventProducer$1.class
+com/example/demo_deposit/dao/TransactionDAO.class
 com/example/demo_deposit/config/AutoCreateConfig.class
 com/example/demo_deposit/controller/DepositEventsController.class
-com/example/demo_deposit/consumer/DepositEventConsumer.class
-com/example/demo_deposit/service/TransactionServiceImpl.class
-com/example/demo_deposit/dao/TransactionDAO.class
 com/example/demo_deposit/DemoDepositApplication.class
